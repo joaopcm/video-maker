@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://gitlab.com/joaopcm/video-maker/issues"
   },
-  "homepage": "https://gitlab.com/joaopcm/video-maker#readme"
+  "homepage": "https://gitlab.com/joaopcm/video-maker#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }
