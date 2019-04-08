@@ -1,3 +1,11 @@
-# video-maker
+# Credentials format
 
-Projeto open source para fazer vídeos de forma programática
+## Algorithmia
+
+File: `algorithmia.json`
+
+```
+{
+  "apiKey": "..."
+}
+```
