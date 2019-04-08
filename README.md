@@ -1,3 +1,3 @@
 # video-maker
 
-Video maker for YouTube.
+Projeto open source para fazer vídeos de forma programática
