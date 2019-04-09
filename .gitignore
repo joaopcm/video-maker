@@ -80,3 +80,6 @@ typings/
 
 #Credentials
 credentials/*.json
+
+#State
+content.json
