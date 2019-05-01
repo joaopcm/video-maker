@@ -83,3 +83,6 @@ credentials/*.json
 
 #State
 content.json
+
+#Generated content
+content/*.png
