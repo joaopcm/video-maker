@@ -78,9 +78,6 @@ typings/
 #DynamoDB Local files 
 .dynamodb/ 
 
-#Credentials
-credentials/*.json
-
 #State
 content.json
 
