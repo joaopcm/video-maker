@@ -11,7 +11,7 @@ async function robot() {
   await createAllSentenceImages(content);
   await createYouTubeThumbnail();
   await createAfterEffectsScript(content);
-  await renderVideoWithAfterEffects();
+  // await renderVideoWithAfterEffects();
   state.save(content);
 
   async function convertAllImages(content) {
