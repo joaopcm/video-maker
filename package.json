@@ -1,0 +1,29 @@
+{
+  "name": "video-maker",
+  "version": "1.0.0",
+  "description": "Projeto open source para fazer vídeos de forma programática",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/joaopcm/video-maker.git"
+  },
+  "author": "João Melo <joao.pedro6532@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/joaopcm/video-maker/issues"
+  },
+  "homepage": "https://gitlab.com/joaopcm/video-maker#readme",
+  "dependencies": {
+    "algorithmia": "^0.3.10",
+    "express": "^4.17.1",
+    "gm": "^1.23.1",
+    "googleapis": "^39.2.0",
+    "image-downloader": "^3.4.2",
+    "readline-sync": "^1.4.9",
+    "sbd": "^1.0.15",
+    "watson-developer-cloud": "^4.0.1"
+  }
+}
