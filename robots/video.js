@@ -5,13 +5,14 @@ const path = require("path");
 const rootPath = path.resolve(__dirname, "..");
 
 async function robot() {
+  console.log("[video-robot] Starting...");
   const content = state.load();
 
   await convertAllImages(content);
   await createAllSentenceImages(content);
   await createYouTubeThumbnail();
   await createAfterEffectsScript(content);
-  // await renderVideoWithAfterEffects();
+  await renderVideoWithAfterEffects();
   state.save(content);
 
   async function convertAllImages(content) {
@@ -54,7 +55,7 @@ async function robot() {
         .write(outputFile, error => {
           if (error) return reject(error);
 
-          console.log(`> Imagem convertida: ${inputFile}`);
+          console.log(`> [video-robot] Image converted: ${inputFile}`);
           resolve();
         });
     });
@@ -118,7 +119,7 @@ async function robot() {
         .write(outputFile, error => {
           if (error) return reject(error);
 
-          console.log(`> Sentença criada: ${outputFile}`);
+          console.log(`> [video-robot] Sentence created: ${outputFile}`);
           resolve();
         });
     });
@@ -131,9 +132,7 @@ async function robot() {
         .write("./content/youtube-thumbnail.jpg", error => {
           if (error) return reject(error);
 
-          console.log(
-            "> Thumbnail do YouTube criada: ./content/youtube-thumbnail.png"
-          );
+          console.log("> [video-robot] YouTube thumbnail created");
           resolve();
         });
     });
@@ -150,7 +149,7 @@ async function robot() {
       const templateFilePath = `${rootPath}/templates/1/template.aep`;
       const destinationFilePath = `${rootPath}/content/output.mov`;
 
-      console.log("> Iniciando After Effects");
+      console.log("> [video-robot] Starting After Effects");
 
       const aerender = spawn(aerenderFilePath, [
         "-comp",
@@ -166,7 +165,7 @@ async function robot() {
       });
 
       aerender.on("close", () => {
-        console.log("> After Effects fechado");
+        console.log("> [video-robot] After Effects closed");
         resolve();
       });
     });
